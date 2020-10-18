@@ -1,0 +1,24 @@
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\bin\Debug\Project_GUI.exe.config
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\bin\Debug\Project_GUI.exe
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\bin\Debug\Project_GUI.pdb
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\bin\Debug\Project_GUI.xml
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\obj\Debug\Project_GUI.vbprojAssemblyReference.cache
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\obj\Debug\Project_GUI.Form1.resources
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\obj\Debug\Project_GUI.Resources.resources
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\obj\Debug\Project_GUI.vbproj.GenerateResource.cache
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\obj\Debug\Project_GUI.vbproj.CoreCompileInputs.cache
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\obj\Debug\Project_GUI.exe
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\obj\Debug\Project_GUI.xml
+C:\Users\Jacob Ingraham\Documents\FA2020\SERTS\Project_1\VB\Project_GUI\Project_GUI\obj\Debug\Project_GUI.pdb
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\bin\Debug\Project_GUI.exe.config
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\bin\Debug\Project_GUI.exe
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\bin\Debug\Project_GUI.pdb
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\bin\Debug\Project_GUI.xml
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.vbprojAssemblyReference.cache
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.Form1.resources
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.Resources.resources
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.vbproj.GenerateResource.cache
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.vbproj.CoreCompileInputs.cache
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.exe
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.xml
+C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.pdb
