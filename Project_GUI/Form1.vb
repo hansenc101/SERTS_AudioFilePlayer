@@ -30,7 +30,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ListBox1.Items.Add("Song_1")
+        ListBox1.Items.Add("Christopher_Hansen")
         ListBox1.Items.Add("Song_2")
         ListBox1.Items.Add("Song_3")
         ListBox1.Items.Add("Song_4")
