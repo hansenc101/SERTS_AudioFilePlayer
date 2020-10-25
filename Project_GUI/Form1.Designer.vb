@@ -25,7 +25,7 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Play_Pause_btn = New System.Windows.Forms.Button()
         Me.Stop_File_btn = New System.Windows.Forms.Button()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.File_List = New System.Windows.Forms.ListBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.USB_btn = New System.Windows.Forms.Button()
@@ -58,15 +58,15 @@ Partial Class Form1
         Me.Stop_File_btn.Text = "Stop"
         Me.Stop_File_btn.UseVisualStyleBackColor = True
         '
-        'ListBox1
+        'File_List
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(356, 82)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(159, 116)
-        Me.ListBox1.TabIndex = 3
+        Me.File_List.FormattingEnabled = True
+        Me.File_List.ItemHeight = 16
+        Me.File_List.Location = New System.Drawing.Point(356, 82)
+        Me.File_List.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.File_List.Name = "File_List"
+        Me.File_List.Size = New System.Drawing.Size(159, 116)
+        Me.File_List.TabIndex = 3
         '
         'TextBox1
         '
@@ -151,10 +151,10 @@ Partial Class Form1
         '
         'Send_File
         '
-        Me.Send_File.Location = New System.Drawing.Point(381, 252)
+        Me.Send_File.Location = New System.Drawing.Point(356, 252)
         Me.Send_File.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Send_File.Name = "Send_File"
-        Me.Send_File.Size = New System.Drawing.Size(111, 31)
+        Me.Send_File.Size = New System.Drawing.Size(177, 31)
         Me.Send_File.TabIndex = 12
         Me.Send_File.Text = "Select Song"
         Me.Send_File.UseVisualStyleBackColor = True
@@ -173,7 +173,7 @@ Partial Class Form1
         Me.Controls.Add(Me.USB_btn)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.File_List)
         Me.Controls.Add(Me.Stop_File_btn)
         Me.Controls.Add(Me.Play_Pause_btn)
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
@@ -186,7 +186,7 @@ Partial Class Form1
 
     Friend WithEvents Play_Pause_btn As Button
     Friend WithEvents Stop_File_btn As Button
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents File_List As ListBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents USB_btn As Button
