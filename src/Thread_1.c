@@ -18,21 +18,36 @@
 #define LED_Orange  1
 #define LED_Red     2
 #define LED_Blue    3
-#define Show_Files_char "1"
+//#define Show_Files_char "1"
 
 enum commands{
   ListFiles,
   SendComplete,
-  SendFiles
+  SendFiles,
+  SelectSong,
+  TogglePlayButton,
+  TogglePauseButton,
+  StopButton
 };
 
 // State Machine definitions
 enum state{
   NoState,
-  Idle,
-  List,
+  IdleUnpopulated,
+  IdlePopulated,
+  SongSelected,
+  Playing,
+  Paused
 };
 
+// Receive characters from the VB GUI
+#define ListFiles_char "1"
+#define SendComplete_char "2"
+#define SendFiles_char "3"
+#define SelectSong_char "4"
+#define TogglePlayButton_char "5"
+#define TogglePauseButton_char "6"
+#define StopButton_char "7"
 
 //////////////////////////////////////////////////////////
 void Control (void const *argument); // thread function
@@ -94,9 +109,6 @@ void FS(void const *arg){
 	LED_On(LED_Green);
 	ustatus = USBH_Initialize (drivenum); // initialize the USB Host
 
-
-
-
 	while(1)
 	{
 		evt = osMessageGet (Command_FSQueue, osWaitForever); // receive command
@@ -151,36 +163,80 @@ void Process_Event(uint16_t event){
   switch(Current_State){
     case NoState:
       // Next State
-      Current_State = Idle;
+      Current_State = IdleUnpopulated;
       // Exit actions
       // Transition actions
       // State1 entry actions
+      LED_Off(LED_Green);
+      LED_Off(LED_Orange);
+      LED_Off(LED_Blue);
       LED_On(LED_Red);
 
       break;
-    case Idle:
+    case IdleUnpopulated:
       if(event == ListFiles){
     	  // send command to FS thread to send files
     	  osMessagePut (Command_FSQueue, SendFiles, osWaitForever);
 
-    	  Current_State = List;
+    	  Current_State = IdlePopulated;
     	  // Exit actions
     	  LED_Off(LED_Red);
     	  // Transition actions
     	  // State2 entry actions
+    	  LED_On(LED_Orange);
+      }
+      break;
+    case IdlePopulated:
+      if(event == SelectSong){
+    	  Current_State = SongSelected;
+    	  // Exit actions
+    	  LED_Off(LED_Orange);
+    	  // Transition actions
+    	  // State1 entry actions
     	  LED_On(LED_Blue);
       }
       break;
-    case List:
-      if(event == SendComplete){
-    	  Current_State = Idle;
-    	  // Exit actions
-    	  LED_Off(LED_Blue);
-    	  // Transition actions
-    	  // State1 entry actions
-    	  LED_On(LED_Red);
-      }
-      break;
+    case SongSelected:
+    	if(event == TogglePlayButton)
+    	{
+    		Current_State = Playing;
+    		LED_Off(LED_Blue);
+    		LED_On(LED_Green);
+
+    	}
+    	if(event == StopButton)
+    	{
+    		Current_State = IdlePopulated;
+    		LED_Off(LED_Blue);
+    		LED_On(LED_Orange);
+    	}
+    break;
+    case Playing:
+    	if(event == TogglePauseButton)
+    	{
+    		Current_State = Paused;
+    		LED_On(LED_Orange);
+    	}
+    	if(event == StopButton)
+    	{
+    		Current_State = IdlePopulated;
+    		LED_Off(LED_Green);
+    		LED_On(LED_Orange);
+    	}
+    break;
+
+    case Paused:
+    	if(event == TogglePlayButton)
+    	{
+    		Current_State = Playing;
+    		LED_Off(LED_Orange);
+    	}
+    	if(event == StopButton)
+    	{
+    	    Current_State = IdlePopulated;
+    	    LED_Off(LED_Green);
+    	}
+    break;
     default:
       break;
   } // end case(Current_State)
@@ -201,13 +257,48 @@ void Control(void const *arg){
 
 void Rx_Command (void const *argument){
    char rx_char[2]={0,0};
+   char song_name[100];
    while(1){
       UART_receive(rx_char, 1); // Wait for command from PC GUI
     // Check for the type of character received
-      if(!strcmp(rx_char,Show_Files_char)){
+      if(!strcmp(rx_char,ListFiles_char))
+      {
          // Show_Files command received
          osMessagePut (CMDQueue, ListFiles, osWaitForever);
       } // end if
+      if(!strcmp(rx_char,SendComplete_char))
+      {
+    	  // Show_Files command received
+    	  osMessagePut (CMDQueue, SendComplete, osWaitForever);
+      } // end if
+      if(!strcmp(rx_char,SendFiles_char))
+      {
+    	  // Show_Files command received
+    	  osMessagePut (CMDQueue, SendFiles, osWaitForever);
+      } // end if
+      if(!strcmp(rx_char,SelectSong_char))
+      {
+    	  // Show_Files command received
+    	  osMessagePut (CMDQueue, SelectSong, osWaitForever);
+    	  // Show_Files command received
+    	  UART_receivestring(song_name, 100);
+    	  rx_char[0] = 1;
+      } // end if
+      if(!strcmp(rx_char,TogglePlayButton_char))
+      {
+    	  // Show_Files command received
+    	  osMessagePut (CMDQueue, TogglePlayButton, osWaitForever);
+	  } // end if
+      if(!strcmp(rx_char,TogglePauseButton_char))
+      {
+    	  // Show_Files command received
+    	  osMessagePut (CMDQueue, TogglePauseButton, osWaitForever);
+	  } // end if
+      if(!strcmp(rx_char,StopButton_char))
+      {
+    	  // Show_Files command received
+    	  osMessagePut (CMDQueue, StopButton, osWaitForever);
+	  } // end if
    }
 } // end Rx_Command
 
