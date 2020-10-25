@@ -35,12 +35,13 @@ Partial Class Form1
         Me.Connect = New System.Windows.Forms.Button()
         Me.ComListBox = New System.Windows.Forms.ListBox()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.Send_File = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Play_Pause_btn
         '
-        Me.Play_Pause_btn.Location = New System.Drawing.Point(314, 285)
-        Me.Play_Pause_btn.Margin = New System.Windows.Forms.Padding(4)
+        Me.Play_Pause_btn.Location = New System.Drawing.Point(315, 298)
+        Me.Play_Pause_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Play_Pause_btn.Name = "Play_Pause_btn"
         Me.Play_Pause_btn.Size = New System.Drawing.Size(100, 28)
         Me.Play_Pause_btn.TabIndex = 0
@@ -49,8 +50,8 @@ Partial Class Form1
         '
         'Stop_File_btn
         '
-        Me.Stop_File_btn.Location = New System.Drawing.Point(460, 285)
-        Me.Stop_File_btn.Margin = New System.Windows.Forms.Padding(4)
+        Me.Stop_File_btn.Location = New System.Drawing.Point(460, 298)
+        Me.Stop_File_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Stop_File_btn.Name = "Stop_File_btn"
         Me.Stop_File_btn.Size = New System.Drawing.Size(100, 28)
         Me.Stop_File_btn.TabIndex = 1
@@ -62,15 +63,15 @@ Partial Class Form1
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(356, 82)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(159, 116)
         Me.ListBox1.TabIndex = 3
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(314, 224)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Location = New System.Drawing.Point(315, 224)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(244, 22)
         Me.TextBox1.TabIndex = 4
@@ -78,8 +79,8 @@ Partial Class Form1
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(314, 13)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox2.Location = New System.Drawing.Point(315, 14)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(244, 22)
         Me.TextBox2.TabIndex = 5
@@ -89,7 +90,7 @@ Partial Class Form1
         'USB_btn
         '
         Me.USB_btn.Location = New System.Drawing.Point(381, 46)
-        Me.USB_btn.Margin = New System.Windows.Forms.Padding(4)
+        Me.USB_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.USB_btn.Name = "USB_btn"
         Me.USB_btn.Size = New System.Drawing.Size(100, 28)
         Me.USB_btn.TabIndex = 6
@@ -98,8 +99,8 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(314, 347)
-        Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ProgressBar1.Location = New System.Drawing.Point(315, 347)
+        Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(245, 28)
         Me.ProgressBar1.TabIndex = 7
@@ -107,6 +108,7 @@ Partial Class Form1
         'ComResultTextBox
         '
         Me.ComResultTextBox.Location = New System.Drawing.Point(11, 130)
+        Me.ComResultTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComResultTextBox.Name = "ComResultTextBox"
         Me.ComResultTextBox.Size = New System.Drawing.Size(221, 22)
         Me.ComResultTextBox.TabIndex = 11
@@ -115,8 +117,9 @@ Partial Class Form1
         'Disconnect
         '
         Me.Disconnect.Location = New System.Drawing.Point(93, 102)
+        Me.Disconnect.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Disconnect.Name = "Disconnect"
-        Me.Disconnect.Size = New System.Drawing.Size(94, 23)
+        Me.Disconnect.Size = New System.Drawing.Size(93, 23)
         Me.Disconnect.TabIndex = 10
         Me.Disconnect.Text = "Disconnect"
         Me.Disconnect.UseVisualStyleBackColor = True
@@ -124,6 +127,7 @@ Partial Class Form1
         'Connect
         '
         Me.Connect.Location = New System.Drawing.Point(12, 102)
+        Me.Connect.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Connect.Name = "Connect"
         Me.Connect.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Connect.Size = New System.Drawing.Size(75, 23)
@@ -136,19 +140,31 @@ Partial Class Form1
         Me.ComListBox.FormattingEnabled = True
         Me.ComListBox.ItemHeight = 16
         Me.ComListBox.Location = New System.Drawing.Point(12, 12)
+        Me.ComListBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComListBox.Name = "ComListBox"
         Me.ComListBox.Size = New System.Drawing.Size(120, 84)
         Me.ComListBox.TabIndex = 8
         '
         'SerialPort1
         '
-        Me.SerialPort1.PortName = "COM4"
+        Me.SerialPort1.PortName = "COM10"
+        '
+        'Send_File
+        '
+        Me.Send_File.Location = New System.Drawing.Point(381, 252)
+        Me.Send_File.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Send_File.Name = "Send_File"
+        Me.Send_File.Size = New System.Drawing.Size(111, 31)
+        Me.Send_File.TabIndex = 12
+        Me.Send_File.Text = "Select Song"
+        Me.Send_File.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(613, 407)
+        Me.Controls.Add(Me.Send_File)
         Me.Controls.Add(Me.ComResultTextBox)
         Me.Controls.Add(Me.Disconnect)
         Me.Controls.Add(Me.Connect)
@@ -160,7 +176,7 @@ Partial Class Form1
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Stop_File_btn)
         Me.Controls.Add(Me.Play_Pause_btn)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -180,4 +196,5 @@ Partial Class Form1
     Friend WithEvents Connect As Button
     Friend WithEvents ComListBox As ListBox
     Friend WithEvents SerialPort1 As IO.Ports.SerialPort
+    Friend WithEvents Send_File As Button
 End Class

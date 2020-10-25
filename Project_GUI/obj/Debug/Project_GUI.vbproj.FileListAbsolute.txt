@@ -22,3 +22,15 @@ C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.
 C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.exe
 C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.xml
 C:\Users\chris\source\repos\Audio_File_Player\Project_GUI\obj\Debug\Project_GUI.pdb
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\bin\Debug\Project_GUI.exe.config
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\bin\Debug\Project_GUI.exe
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\bin\Debug\Project_GUI.pdb
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\bin\Debug\Project_GUI.xml
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\obj\Debug\Project_GUI.vbprojAssemblyReference.cache
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\obj\Debug\Project_GUI.Form1.resources
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\obj\Debug\Project_GUI.Resources.resources
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\obj\Debug\Project_GUI.vbproj.GenerateResource.cache
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\obj\Debug\Project_GUI.vbproj.CoreCompileInputs.cache
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\obj\Debug\Project_GUI.exe
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\obj\Debug\Project_GUI.xml
+C:\Users\chris\Source\Repos\hansenc101\SERTS_AudioFilePlayer\Project_GUI\obj\Debug\Project_GUI.pdb

@@ -10,11 +10,30 @@ Public Class Form1
             Play_Pause_btn.Text = "Pause"
             TextBox1.Text = "Playing " + SongPlaying
             isPlaying = True
+            Try
+                SerialPort1.Open()
+            Catch
+                Console.WriteLine("Failed to open serial port")
+            End Try
+
+            If SerialPort1.IsOpen Then
+                SerialPort1.Write("5", 0, 1)
+            End If
 
         ElseIf isPlaying = True Then
             Play_Pause_btn.Text = "Play"
             TextBox1.Text = "Paused " + SongPlaying
             isPlaying = False
+
+            Try
+                SerialPort1.Open()
+            Catch
+                Console.WriteLine("Failed to open serial port")
+            End Try
+
+            If SerialPort1.IsOpen Then
+                SerialPort1.Write("6", 0, 1)
+            End If
         End If
     End Sub
 
@@ -24,6 +43,16 @@ Public Class Form1
         'ListBox1.ClearSelected()
         ' SongPlaying = ""
         isPlaying = False
+
+        Try
+            SerialPort1.Open()
+        Catch
+            Console.WriteLine("Failed to open serial port")
+        End Try
+
+        If SerialPort1.IsOpen Then
+            SerialPort1.Write("7", 0, 1)
+        End If
     End Sub
 
 
@@ -108,6 +137,14 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles USB_btn.Click
+        If SerialPort1.IsOpen Then
+            SerialPort1.Write("1", 0, 1)
+        End If
+    End Sub
 
+    Private Sub Send_File_Click(sender As Object, e As EventArgs) Handles Send_File.Click
+        If SerialPort1.IsOpen Then
+            SerialPort1.Write("4", 0, 1)
+        End If
     End Sub
 End Class
